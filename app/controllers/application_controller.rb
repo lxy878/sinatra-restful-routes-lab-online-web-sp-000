@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
   # display a recipe
   get '/recipes/:id' do
     @recipe = Recipe.find(params[:id])
-    reb :recipe
+    erb :recipe
   end
 
 
