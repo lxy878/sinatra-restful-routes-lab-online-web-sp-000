@@ -22,7 +22,9 @@ class ApplicationController < Sinatra::Base
   end
 
   # edit a recipe
-  get '/recipes/:id/edit'
+  get '/recipes/:id/edit' do
+
+  end
 
   # display all recipes
 
