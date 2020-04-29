@@ -33,8 +33,8 @@ class ApplicationController < Sinatra::Base
 
   # display a recipe
   get '/recipes/:id' do
-    binding.pry
     @recipe = Recipes.find(params[:id])
+    binding.pry
     reb :recipe
   end
 
