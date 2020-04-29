@@ -34,6 +34,7 @@ class ApplicationController < Sinatra::Base
     Recipe.find(params[:id]).destroy
     redirect '/recipes'
   end
+  
   # display a recipe
   get '/recipes/:id' do
     @recipe = Recipe.find(params[:id])
