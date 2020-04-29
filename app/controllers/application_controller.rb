@@ -32,7 +32,7 @@ class ApplicationController < Sinatra::Base
   end
 
   delete '/recipes/delete' do
-    Recipe.find
+    
   end
   # display a recipe
   get '/recipes/:id' do
