@@ -32,6 +32,7 @@ class ApplicationController < Sinatra::Base
 
   # display a recipe
   get '/recipes/:id' do
+    puts params[:id]
     @recipe = Recipes.find(params[:id])
     reb :recipe
   end
