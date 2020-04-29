@@ -21,11 +21,6 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  # edit a recipe
-  get '/recipes/:id/edit' do
-
-  end
-
   # display all recipes
 
   get '/recipes' do
@@ -45,5 +40,9 @@ class ApplicationController < Sinatra::Base
     erb :recipe
   end
 
+  # edit a recipe
+  get '/recipes/:id/edit' do
 
+  end
+  
 end
