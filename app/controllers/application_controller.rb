@@ -14,7 +14,6 @@ class ApplicationController < Sinatra::Base
 
   post '/recipes' do
     new_recipe = Recipe.new(params)
-    binding.pry
     if new_recipe.save
       redirect "/recipes/#{new_recipe.id}"
     else
