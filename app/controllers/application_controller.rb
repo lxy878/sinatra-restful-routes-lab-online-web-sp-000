@@ -1,3 +1,4 @@
+require 'pry'
 class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
@@ -13,7 +14,7 @@ class ApplicationController < Sinatra::Base
 
   post '/recipes' do
     new_recipe = Recipe.new(params)
-    
+
     if new_recipe.save
       redirect "/recipes/#{new_recipe.id}"
     else
