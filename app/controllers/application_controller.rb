@@ -13,6 +13,7 @@ class ApplicationController < Sinatra::Base
 
   post '/recipes' do
     new_recipe = Recipe.new(params)
+    raise new_recipe.id
     if new_recipe.save
       raise new_recipe.id
       redirect "/recipes/#{new_recipe.id}"
@@ -30,7 +31,7 @@ class ApplicationController < Sinatra::Base
   get '/recipes' do
     erb :index
   end
-  
+
   # display a recipe
   get '/recipes/:id' do
     @recipe = Recipes.find(params[:id])
