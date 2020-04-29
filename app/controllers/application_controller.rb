@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
 
   post '/recipes' do
     new_recipe = Recipe.new(params)
-    raise new_recipe.id
+    raise params
     if new_recipe.save
       raise new_recipe.id
       redirect "/recipes/#{new_recipe.id}"
