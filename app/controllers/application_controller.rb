@@ -15,7 +15,7 @@ class ApplicationController < Sinatra::Base
   post '/recipes' do
     new_recipe = Recipe.new(params)
     if new_recipe.save
-      raise new_recipe.id
+      binding.pry
       redirect "/recipes/#{new_recipe.id}"
     else
       erb :error
